@@ -1,11 +1,11 @@
 {
-    "name": "aviationcode/laravel-ecs-logging",
+    "name": "ramibadrpro/laravel-ecs-logging",
     "description": "Logging Laravel log's into Elasticsearch ECS format.",
     "keywords": [
-        "aviationcode",
+        "ramibadrpro",
         "laravel-ecs-logging"
     ],
-    "homepage": "https://github.com/aviationcode/laravel-ecs-logging",
+    "homepage": "https://github.com/ramibadrpro/laravel-ecs-logging",
     "license": "MIT",
     "type": "library",
     "authors": [
