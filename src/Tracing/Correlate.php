@@ -11,11 +11,11 @@ class Correlate
 {
     private const DEFAULT_HEADER = 'X-Correlation-Id';
 
-    private static ?string $id;
+    private static ?string $id = null;
 
-    private static ?Closure $generator;
+    private static ?Closure $generator = null;
 
-    private static ?string $headerName;
+    private static ?string $headerName = null;
 
     /**
      * Returns the unique correlation id.

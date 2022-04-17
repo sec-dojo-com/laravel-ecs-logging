@@ -14,9 +14,9 @@ use Ramsey\Uuid\Uuid;
  */
 class Message
 {
-    private static ?string $id;
+    private static ?string $id = null;
 
-    private static ?Closure $generator;
+    private static ?Closure $generator = null;
 
     /**
      * Returns the unique correlation id.
