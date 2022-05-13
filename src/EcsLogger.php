@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Monolog\Handler\RotatingFileHandler;
+use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Monolog\Logger as Monolog;
 use Psr\Log\LoggerInterface;
@@ -35,14 +36,28 @@ class EcsLogger implements LoggerInterface
 
     public function __construct(array $config)
     {
-        $handler = new RotatingFileHandler(
-            $config['path'],
-            $config['days'] ?? 7,
-            $this->level($config),
-            $config['bubble'] ?? true,
-            $config['permission'] ?? null,
-            $config['locking'] ?? false
-        );
+        $disable_log_rotation = $config["disable_rotate"] ?? false;
+        if($disable_log_rotation == true) {
+            $handler = new StreamHandler(
+                $config['path'],
+                $this->level($config),
+                $config['bubble'] ?? true,
+                $config['permission'] ?? null,
+                $config['locking'] ?? false
+            );
+            
+        }
+        else {
+            $handler = new RotatingFileHandler(
+                $config['path'],
+                $config['days'] ?? 7,
+                $this->level($config),
+                $config['bubble'] ?? true,
+                $config['permission'] ?? null,
+                $config['locking'] ?? false
+            );
+        }
+
 
         $handler
             ->setFormatter(new EcsFormatter())

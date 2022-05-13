@@ -63,6 +63,9 @@ filebeat.inputs:
 
 ```Typed static property Aviation Code\Ecs Logging\Tracing\Correlate::$id must not be accessed before initialization```
 
+### Fork Changelog :
+13/05/2022 : 
+Added the option to disable log file rotation through config file (Use the option `disable_rotate`)
 
 ## Credits
 
