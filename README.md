@@ -59,14 +59,11 @@ filebeat.inputs:
           overwrite_keys: true
 ```
 
-## BUGS:
+## Bugs:
 
--   Current bugs within the ecs-logs package:
+Current bugs within the ecs-logs package:
 
-`Typed static property Aviation Code\Ecs Logging\Tracing\Correlate::$id must not be accessed before initialization`
-
-This is due to trying to access type hinted properties statically before assigning values to them,
-this was fixed by initialising them with null values
+- `Typed static property Aviation Code\Ecs Logging\Tracing\Correlate::$id must not be accessed before initialization`. This is due to trying to access type hinted properties statically before assigning values to them, this was fixed by initialising them with null values.
 
 ## Original repository
 
