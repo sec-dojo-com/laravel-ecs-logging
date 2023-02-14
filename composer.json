@@ -1,11 +1,11 @@
 {
-    "name": "ramibadrpro/laravel-ecs-logging",
-    "description": "Logging Laravel log's into Elasticsearch ECS format.",
+    "name": "sec-dojo-com/laravel-ecs-logging",
+    "description": "Adding ECS (Elastic Common Schema) Logging to Laravel (Updated).",
     "keywords": [
-        "ramibadrpro",
+        "sec-dojo-com",
         "laravel-ecs-logging"
     ],
-    "homepage": "https://github.com/ramibadrpro/laravel-ecs-logging",
+    "homepage": "https://github.com/sec-dojo-com/laravel-ecs-logging",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -13,6 +13,15 @@
             "name": "Ken Andries",
             "email": "ken.andries.1992@gmail.com",
             "role": "Developer"
+        },
+        {
+            "name": "Badr Errami",
+            "role": "Developer"
+        },
+        {
+            "name": "El Mahdi Sidate",
+            "email": "esidate@sekera-group.com",
+            "role": "DevOps"
         }
     ],
     "require": {
